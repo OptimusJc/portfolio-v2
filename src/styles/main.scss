@@ -1,0 +1,8 @@
+@import "./variables";
+@import "./header";
+
+body {
+    background: $navy;
+    color: $slate;
+    font-size: 0.9rem;
+}

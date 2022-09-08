@@ -1,12 +1,24 @@
-import * as React from "react";
+import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.min.js";
+import "../styles/main.scss";
+
+import Layout from "../components/Layouts.js";
 
 const IndexPage = () => {
-  return (
-    <section>
-      <h1>Welcome to my portfolio site!</h1>
-    </section>
-  );
-}
-export default IndexPage
+	return (
+		<div>
+			<Layout />
+		</div>
+	);
+};
 
-export const Head = () => <title>Joseph's Portfolio</title>
+export default IndexPage;
+
+export const Head = () => {
+	return (
+		<>
+			<title>Joseph's Portfolio</title>
+		</>
+	);
+};

@@ -1,0 +1,51 @@
+section.header {
+
+    .container-fluid {
+        .navbar-brand {
+            font-weight: bold;
+            color: $slate;
+        }
+
+        button.navbar-toggler {
+            svg.navbar-toggler-icon {
+                color: $slate;
+                width: 40px;
+                height: 40px;
+            }
+            
+            &:focus {
+                box-shadow: none;
+            }
+        }
+
+        #navbarSupportedContent .navbar-nav {
+            counter-reset: my-sec-counter;
+
+            a.nav-link {
+                color: $slate;
+                position: relative;
+                padding-inline-start: 1.5rem;
+                margin-inline: 0.7rem;
+
+                &::before {
+                    position: absolute;
+                    counter-increment: my-sec-counter;
+                    content: "0"counter(my-sec-counter)".";
+                    left: 0;
+                    padding-inline-end: 1rem;
+                    color: $blue;
+
+                }
+            }
+        }
+
+        @media (min-width: 64em) {
+            .collapse {
+                ul.navbar-nav {
+                    width: 100%;
+                    justify-content: flex-end;
+                }
+            }
+        }
+    }
+}
