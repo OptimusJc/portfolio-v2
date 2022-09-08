@@ -3,7 +3,7 @@ import { HiMenuAlt4 } from "react-icons/hi";
 
 const Header = () => {
 	return (
-		<section class="header">
+		<section class="header sticky-top">
 			<div class="container">
 				<div class="row">
 					<div class="col">
