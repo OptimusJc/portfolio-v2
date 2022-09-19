@@ -32,6 +32,10 @@ section.header {
                     height: 45px;
                     color: $green;
                     opacity: 1;
+
+                    @media (min-width: 48em) {
+                        padding-inline: 2rem;
+                    }
                 }
             }
 
@@ -59,6 +63,11 @@ section.header {
 
                                 top: 0.2rem;
                                 color: $green;
+                                font-family: 'Courier New', Courier, monospace;
+                            }
+
+                            &:hover {
+                                color: $green;
                             }
                         }   
 
@@ -69,12 +78,20 @@ section.header {
                             width: 80%;
                             margin-inline: auto;
 
+                            @media (min-width: 48em) {
+                                width: 30%;
+                            }
+
                             a {
                                 padding: 1rem;
                                 width: 100%;
 
                                 &::before {
                                     display: none;
+                                }
+
+                                &:hover {
+                                    background: $green-tint;
                                 }
                             }
                         }
@@ -88,11 +105,36 @@ section.header {
             #navbarSupportedContent  {
                 background: $navy;
                 width: 100%;
-
+                
                 .offcanvas-body {
                     ul.navbar-nav {
                         width: 100%;
-                        justify-content: flex-end;
+                        
+
+                        li.nav-item {
+                            margin-top: initial;
+                            margin-inline: .2rem;
+
+                            a.nav-link {
+                                padding: 1rem;
+                                padding-inline-start: 2.7rem;
+        
+                                &::before {
+                                    left: 1rem;
+                                    top: initial;
+                                }
+                            }   
+
+                            &:last-child {
+                                width: 15%;
+                                margin-inline: initial;
+                                margin-inline-start: 3rem;
+    
+                                a {
+                                    padding: 1rem;
+                                }
+                            }
+                        }
                     }
                 }
 
