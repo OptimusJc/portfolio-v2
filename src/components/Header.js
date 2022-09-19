@@ -1,60 +1,74 @@
 import React from "react";
 import { HiMenuAlt4 } from "react-icons/hi";
+import { IoClose } from "react-icons/io5";
 
 const Header = () => {
 	return (
-		<section class="header sticky-top">
-			<div class="container">
-				<div class="row">
-					<div class="col">
-						<nav class="navbar navbar-expand-lg">
-							<div class="container-fluid">
-								<a class="navbar-brand" href="#">
+		<section className="header sticky-top">
+			<div className="container">
+				<div className="row">
+					<div className="col">
+						<nav className="navbar navbar-expand-lg">
+							<div className="container-fluid">
+								<a className="navbar-brand" href="#">
 									Joseph's Portfolio
 								</a>
 								<button
-									class="navbar-toggler"
+									className="navbar-toggler"
 									type="button"
-									data-bs-toggle="collapse"
+									data-bs-toggle="offcanvas"
 									data-bs-target="#navbarSupportedContent"
 									aria-controls="navbarSupportedContent"
 									aria-expanded="false"
 									aria-label="Toggle navigation"
 								>
-									<HiMenuAlt4 class="navbar-toggler-icon" />
+									<HiMenuAlt4 className="navbar-toggler-icon" />
 								</button>
 
 								<div
-									class="collapse navbar-collapse"
+									className="offcanvas offcanvas-end"
 									id="navbarSupportedContent"
 								>
-									<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-										<li class="nav-item">
-											<a class="nav-link active" aria-current="page" href="#">
-												About
-											</a>
-										</li>
-										<li class="nav-item">
-											<a class="nav-link" href="#">
-												Experience
-											</a>
-										</li>
-										<li class="nav-item">
-											<a href="#" class="nav-link">
-												Work
-											</a>
-										</li>
-										<li class="nav-item">
-											<a href="#" class="nav-link">
-												Contact
-											</a>
-										</li>
-										<li class="nav-item">
-											<a href="#" class="nav-link">
-												Resume
-											</a>
-										</li>
-									</ul>
+									<div className="offcanvas-header">
+										<IoClose
+											className="btn-close"
+											data-bs-dismiss="offcanvas"
+											aria-label="close"
+										/>
+									</div>
+									<div className="offcanvas-body">
+										<ul className="navbar-nav justify-content-end flex-grow-1">
+											<li className="nav-item">
+												<a
+													className="nav-link active"
+													aria-current="page"
+													href="#"
+												>
+													About
+												</a>
+											</li>
+											<li className="nav-item">
+												<a className="nav-link" href="#">
+													Experience
+												</a>
+											</li>
+											<li className="nav-item">
+												<a href="#" className="nav-link">
+													Work
+												</a>
+											</li>
+											<li className="nav-item">
+												<a href="#" className="nav-link">
+													Contact
+												</a>
+											</li>
+											<li className="nav-item">
+												<a href="#" className="nav-link">
+													Resume
+												</a>
+											</li>
+										</ul>
+									</div>
 								</div>
 							</div>
 						</nav>

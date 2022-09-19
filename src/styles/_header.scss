@@ -3,12 +3,14 @@ section.header {
     .container-fluid {
         .navbar-brand {
             font-weight: bold;
-            color: $slate;
+            color: $green;
         }
 
         button.navbar-toggler {
+            padding-inline: 0.5rem;
+
             svg.navbar-toggler-icon {
-                color: $slate;
+                color: $green;
                 width: 40px;
                 height: 40px;
             }
@@ -18,34 +20,84 @@ section.header {
             }
         }
 
-        #navbarSupportedContent .navbar-nav {
-            counter-reset: my-sec-counter;
+        #navbarSupportedContent  {
+            background: $light-navy;
+            width: 75%;
 
-            a.nav-link {
-                color: $slate;
-                position: relative;
-                padding-inline-start: 1.5rem;
-                margin-inline: 0.7rem;
+            .offcanvas-header {
+                justify-content: flex-end;
 
-                &::before {
-                    position: absolute;
-                    counter-increment: my-sec-counter;
-                    content: "0"counter(my-sec-counter)".";
-                    left: 0;
-                    padding-inline-end: 1rem;
-                    color: $blue;
+                svg {
+                    width: 45px;
+                    height: 45px;
+                    color: $green;
+                    opacity: 1;
+                }
+            }
+
+            .offcanvas-body {
+                .navbar-nav {
+                    counter-reset: my-sec-counter;
+                    
+                    li.nav-item {
+                        margin-top: 2rem;
+
+                        a.nav-link {
+                            color: $slate;
+                            position: relative;
+                            padding: 1.5rem;
+
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+    
+                            &::before {
+                                position: absolute;
+                                counter-increment: my-sec-counter;
+                                content: "0"counter(my-sec-counter)".";
+
+                                top: 0.2rem;
+                                color: $green;
+                            }
+                        }   
+
+                        // * resume button styles 
+                        &:last-child {
+                            border: 2px solid $green;
+                            text-align: center;
+                            width: 80%;
+                            margin-inline: auto;
+
+                            a {
+                                padding: 1rem;
+                                width: 100%;
+
+                                &::before {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
 
                 }
             }
         }
 
         @media (min-width: 64em) {
-            .collapse {
-                ul.navbar-nav {
-                    width: 100%;
-                    justify-content: flex-end;
+            #navbarSupportedContent  {
+                background: $navy;
+                width: 100%;
+
+                .offcanvas-body {
+                    ul.navbar-nav {
+                        width: 100%;
+                        justify-content: flex-end;
+                    }
                 }
+
             }
+
         }
     }
 }
