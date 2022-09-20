@@ -5,7 +5,7 @@ import resume from "../images/JOSEPH OTIENO.pdf";
 
 const Header = () => {
 	return (
-		<section className="header sticky-top">
+		<section className="header">
 			<div className="container">
 				<div className="row">
 					<div className="col">

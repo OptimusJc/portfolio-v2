@@ -1,4 +1,5 @@
 section.header {
+    padding-block: 0.7rem;
 
     .container-fluid {
         .navbar-brand {
@@ -26,6 +27,7 @@ section.header {
 
             .offcanvas-header {
                 justify-content: flex-end;
+                padding: 1.5rem;
 
                 svg {
                     width: 45px;
