@@ -1,0 +1,102 @@
+.hero {
+    margin-block: 2rem;
+
+    .hero-body {
+        padding: 1rem;
+
+        & > span {
+            color: $green;
+            font-size: 1rem;
+            display: block;
+            margin-block-end: 0.6rem;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: bold;
+            line-height: 3rem;
+            
+            span {
+                color: $light-slate;
+            }
+        }
+
+        p {
+            line-height: 1.5rem;
+        }
+
+        button.btn-outline-info {
+            color: $green;
+            border: 1.5px solid $green;
+            border-radius: 0;
+            padding: 0.6rem 1.8rem;
+            margin-block: 2rem;
+
+            &:hover {
+                background: $green-tint;
+            }
+        }
+    }
+    
+
+    @media (min-width: 48em) {
+        height: 50vh;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        
+        .hero-body {
+            width: 500px;
+
+            & > span {
+                font-size: 1.1rem;
+            }
+
+            h1 {
+                font-size: 2.6rem;
+                padding-block: 1rem;
+            }
+        }
+    }
+
+    @media (min-width: 64em) {
+        height: 100vh;
+
+        .hero-body {
+            width: 600px;
+
+            h1 {
+                font-size: 3rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+            
+            button.btn-outline-info {
+                padding: 0.8rem 2rem;
+            }
+        }
+    }
+
+    @media (min-width: 86em) {
+        .hero-body {
+            width: 700px;
+
+            & > span, p {
+                font-size: 1.1rem;
+            }
+
+            h1 {
+                font-size: 3.5rem;
+                line-height: 3.8rem;
+            }
+
+            p {
+                line-height: 1.7rem;
+            }
+        }
+    }
+
+}
