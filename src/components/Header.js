@@ -1,7 +1,7 @@
 import React from "react";
 import { HiMenuAlt4 } from "react-icons/hi";
 import { IoClose } from "react-icons/io5";
-import resume from "../images/JOSEPH OTIENO.pdf";
+// import resume from "../images/JOSEPH OTIENO.pdf";
 
 const Header = () => {
 	return (
@@ -64,7 +64,7 @@ const Header = () => {
 												</a>
 											</li>
 											<li className="nav-item">
-												<a href={resume} className="nav-link" download>
+												<a href="#" className="nav-link" download>
 													Resume
 												</a>
 											</li>
